@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+#title {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+#dateLabel {
+    margin-bottom: 1rem;
+    position: absolute;
+}
+
+#dateInput {
+    font-size: 1.5rem;
+}
