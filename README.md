@@ -14,3 +14,5 @@ Ejercitación JavaScript en Bootcamp Ada It
 - Spread Operator
 - Arrays of Objects
 - Destructuring
+- Asynchronous
+- Fetch API
