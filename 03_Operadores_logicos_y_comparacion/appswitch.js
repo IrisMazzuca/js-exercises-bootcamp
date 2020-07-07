@@ -2,27 +2,27 @@
 
 //Crear un programa que pida una estación del año y mostrar en un mensaje la fecha en la que comienza y termina
 
-// const getDates = (season) => {
+const getDates = (season) => {
 
-//     switch (season) {
-//         case 'verano':
-//             dates = '21-dic al 20-mar';
-//             break;
-//         case 'invierno':
-//             dates = '21-jun al 20-sep';
-//             break;
-//         case 'primavera':
-//             dates = '21-sep al 20-dic';
-//             break;
-//         case 'otoño':
-//             dates = '21-mar al 20-jun';
-//             break;
-//         default:
-//             dates = 'inválido';
-//     }
+    switch (season) {
+        case 'verano':
+            dates = '21-dic al 20-mar';
+            break;
+        case 'invierno':
+            dates = '21-jun al 20-sep';
+            break;
+        case 'primavera':
+            dates = '21-sep al 20-dic';
+            break;
+        case 'otoño':
+            dates = '21-mar al 20-jun';
+            break;
+        default:
+            dates = 'inválido';
+    }
 
-//     return dates;
-// };
+    return dates;
+};
 
 
 // const estacion = prompt('Ingrese una estación del año');
@@ -99,7 +99,7 @@
 
 
 // const tamagochi = (input) => {
-   
+
 //     switch (input) {
 //     case 'ALIMENTAR':
 //         result = feed(happiness, energy, health, cleanliness);
@@ -307,28 +307,28 @@
 let pin = 12345;
 
 const atm = (optionClient) => {
-    let money = 1000; 
+    let money = 1000;
     let cbuIris = 1010101010;
-    let cbuPepito = 2020202020;  
+    let cbuPepito = 2020202020;
     let result;
     switch (optionClient) {
         case 'A':
             result = extract(askHowMuch(), money);
-        break;
+            break;
         case 'B':
             result = deposit(askHowMuch(), money);
-        break;
+            break;
         case 'C':
             result = transfer(askHowMuch(), money, cbuIris, cbuPepito);
-        break;
+            break;
         case 'D':
             result = changePin(pin);
-        break;
+            break;
         case 'E':
             alert('Ud ha salido del sistema. Hasta pronto!');
-        break;
+            break;
         default:
-           alert('Opción inválida');
+            alert('Opción inválida');
     }
     return result;
 };
@@ -339,18 +339,18 @@ const askHowMuch = () => {
 };
 
 const extract = (number, money) => {
-    
+
     if (number <= money) {
         money -= number;
         alert(`Su nuevo saldo, luego de extraer $ ${number}, es de $ ${money}`);
     } else {
-       alert(`No hay suficiente dinero para retirar, su saldo es $ ${money}`); 
+        alert(`No hay suficiente dinero para retirar, su saldo es $ ${money}`);
     };
 };
 
 const deposit = (number, money) => {
     money += number;
-    alert(`Su nuevo saldo, luego de depositar $ ${number}, es de $ ${money}`); 
+    alert(`Su nuevo saldo, luego de depositar $ ${number}, es de $ ${money}`);
 };
 
 
@@ -362,11 +362,11 @@ const transfer = (number, money, cbuIris, cbuPepito) => {
             money -= number;
             alert(`Su nuevo saldo, luego de transferir $ ${number}, es de $ ${money}`)
         } else {
-            alert(`NO tiene saldo suficiente, saldo actual de $ ${money}`); 
-            };
+            alert(`NO tiene saldo suficiente, saldo actual de $ ${money}`);
+        };
     } else {
         alert('CBU incorrecto');
-    }; 
+    };
 };
 
 const changePin = (pin) => {
