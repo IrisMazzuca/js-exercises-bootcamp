@@ -5,7 +5,6 @@
 // - Si es mayor, tiene que resolver correctamente y devolver el mensaje`[NUM] es mayor a diez, ¡éxito!`
 // - Si es menor o igual, tiene que rechazarse y devolver el mensaje`[NUM] es menor o igual a diez, ¡error!
 
-//CAMBIAR CON ASYNC AWAIT
 
 const esMayorADiez = (num) => {
   return new Promise((resolve, reject) => {
@@ -23,14 +22,11 @@ const nuevaFx = async (num) => {
   console.log(resultado);
 }
 
-nuevaFx(15);
-nuevaFx(8);
+esMayorADiez(15)
+  .then((result) => console.log(result)) // 15 es mayor a diez, ¡éxito!
+  .catch((error) => console.log(error));
 
-// esMayorADiez(15)
-//   .then((result) => console.log(result)) // 15 es mayor a diez, ¡éxito!
-//   .catch((error) => console.log(error));
-
-// esMayorADiez(8)
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log(error)); // 8 es menor o igual a diez, ¡error!
+esMayorADiez(8)
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error)); // 8 es menor o igual a diez, ¡error!
 
